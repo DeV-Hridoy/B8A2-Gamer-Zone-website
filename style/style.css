@@ -212,14 +212,52 @@ header {
   border-radius: 8px;
 }
 
-
-.over-img{
+.over-img {
   width: 50%;
   position: relative;
   bottom: 195px;
   right: 90px;
   border-radius: 8px;
+}
 
+.icon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  background: linear-gradient(90deg, rgba(255, 66, 164, 0) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  gap: 5px;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FFF;
+  
+}
+
+.icon-img {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.icon-container p {
+  color: #0b0223;
+  font-size: .75rem;
+  font-weight: 600;
+  width: 120px;
+}
+
+
+.icon-container:hover{
+  border: 2px solid pink;
+}
+
+.icon-container p:hover {
+  color: pink;
 }
 /* footer section */
 
