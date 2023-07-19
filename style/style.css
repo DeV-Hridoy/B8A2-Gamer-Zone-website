@@ -153,8 +153,44 @@ header {
   justify-content: space-between;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #736c6cb2;
+  border-radius: 8px;
+}
+
+.hoverButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hoverButton img {
+  height: 40px !important;
+  width: 40px !important;
+}
+
+
 .games-img {
   width: 250px;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .overlay {
+  opacity: 90%;
 }
 
 .games-img img {
@@ -168,10 +204,6 @@ header {
   font-weight: 500;
 }
 
-/* .online-games-img .games-img img:hover {
-  border: 4px solid rgba(255, 0, 0, 0.411);
-  background-color: rgba(255, 0, 0, 0.432);
-} */
 
 /* play instantly section */
 
@@ -254,11 +286,14 @@ header {
 
 .icon-container:hover{
   border: 2px solid pink;
-}
-
-.icon-container p:hover {
   color: pink;
 }
+
+.icon-container:hover p {
+  color: pink;
+}
+
+
 /* footer section */
 
 footer {
@@ -268,9 +303,9 @@ footer {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 0px !important;
 }
 
 .footer-logo {
@@ -285,15 +320,28 @@ footer {
   height: 35px;
 }
 
-.footer-text,
-.footer-small-text {
-  display: flex;
-  justify-content: center;
+.footer-text {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 50%;
+  margin: 0 auto;
   padding-bottom: 10px;
 }
-.footer-connect {
-  gap: 20px;
+
+.footer-small-text {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 40%;
+  margin: 0 auto;
   padding-bottom: 10px;
+}
+
+.footer-connect {
+  padding-bottom: 10px;
+}
+
+.footer-connect a {
+  margin: 0px 10px;
 }
 
 .footer-text {
@@ -304,7 +352,7 @@ footer {
 
 .footer-small-text {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.65rem;
+  font-size: .65rem;
   font-weight: 500;
   gap: 25px;
 }
@@ -321,13 +369,26 @@ footer p {
   body {
     padding: 0;
   }
+
   .nav-container {
     flex-direction: column;
     height: 300px;
+
   }
+
+  header {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .nav-logo img {
+    width: 100%;
+  }
+
   .nav-buttons ul {
     flex-direction: column;
   }
+
   .banner {
     flex-direction: column-reverse;
   }
@@ -342,7 +403,40 @@ footer p {
     flex-direction: column;
     text-align: center;
   }
+
   .online-games-img p {
     font-size: 0.75rem;
   }
+  .icon{
+    grid-template-columns: repeat(3,1fr);
+  } 
+
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-text {
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    gap: 3px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+  .footer-small-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin: 0 auto;
+    gap: 0px;
+    padding-bottom: 10px;
+  }
+
+  .copyright {
+    margin: auto;
+    width: 42%;
+    text-overflow: wrap;
+  }
+
 }
